@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image API</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./assets/fontawesome/css/all-fonts.min.css" />
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="header-title">Image API</h1>
+      <div class="search-container">
+        <form action="#" class="search-form">
+          <input type="text" class="search-input" />
+          <button type="submit" class="search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+      <div class="images-list"></div>
+      <img
+        src="./assets/loading.gif"
+        alt="loading"
+        class="loading-img condition-img"
+      />
+      <img
+        src="./assets/not-found.png"
+        alt="not found"
+        class="not-found-img condition-img"
+      />
+
+      <div class="pagination-container">
+        <a href="#" class="page-btn active" data-page="1">1</a>
+        <a href="#" class="page-btn" data-page="2">2</a>
+        <a href="#" class="page-btn" data-page="3">3</a>
+        <a href="#" class="page-btn" data-page="4">4</a>
+        <a href="#" class="page-btn" data-page="5">5</a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer-text">
+        Made with 💙 by
+        <a href="https://github.com/FatemehAllameh">Fatemeh Allameh</a>
+      </p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="./script.js"></script>
+  </body>
 </html>
