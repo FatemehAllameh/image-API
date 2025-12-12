@@ -1,7 +1,7 @@
 :root {
-  --bg: #a7ebf2;
+  --bg: #c8f3f8;
   --header-bg: #023859;
-  --text: #54acbf;
+  --text: #5cbbd1;
 }
 
 * {
@@ -41,4 +41,151 @@ input {
 
 button {
   cursor: pointer;
+}
+
+/* 
+==========
+  HEADER
+==========
+*/
+.header {
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.header-title {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+.search-container {
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.search-input {
+  border: 1.2px solid var(--text);
+  border-radius: 10px;
+  width: 50%;
+  height: 2rem;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.search-btn {
+  color: white;
+  background-color: var(--text);
+  width: 3.5rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.fa-search {
+  font-size: 1rem;
+}
+
+.main {
+}
+
+.images-list {
+}
+
+.loading-img {
+  display: none;
+}
+
+.condition-img {
+}
+
+.not-found-img {
+  display: none;
+}
+
+.condition-img {
+}
+
+.pagination {
+}
+
+.page-btn {
+}
+
+.active {
+}
+
+/* 
+==============
+  Responsive
+==============
+*/
+
+/* ====== 480px ====== */
+
+@media (min-width: 480px) {
+  /* header */
+  .header-title {
+    font-size: 2.5rem;
+  }
+  .search-input {
+    width: 40%;
+    height: 2.5rem;
+    border-radius: 50px;
+  }
+  .search-btn {
+    width: 4rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+  }
+}
+
+/* ====== 576px ====== */
+@media (min-width: 576px) {
+}
+
+/* ====== 768px ====== */
+@media (min-width: 758px) {
+}
+
+/* ====== 992px ====== */
+@media (min-width: 992px) {
+  /* header */
+  .header-title {
+    font-size: 3rem;
+  }
+  .search-input {
+    width: 30%;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+  }
+  .search-btn {
+    width: 4.5rem;
+    height: 3rem;
+    padding: 0.8rem;
+    border-radius: 50px;
+  }
+
+  .fa-search {
+    font-size: 1.3rem;
+  }
+}
+
+/* ====== 1200px ====== */
+@media (min-width: 1200px) {
 }
