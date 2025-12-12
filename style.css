@@ -174,6 +174,33 @@ button {
 }
 
 /* 
+===========
+  FOOTER
+==========
+*/
+.footer {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.footer-text {
+  font-size: 1.5rem;
+  color: #26658c;
+  padding-bottom: 1rem;
+}
+
+.footer-text a {
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  color: #023859;
+}
+
+.footer-text a:hover {
+  transform: scale(1.02);
+}
+
+/* 
 ==============
   Responsive
 ==============
