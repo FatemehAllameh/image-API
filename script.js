@@ -1,6 +1,7 @@
 // ELEMENTS
 const loadingImage = document.querySelector(".loading-img");
 const errorMessage = document.querySelector(".error-message");
+const imagesList = document.querySelector(".images-list");
 const pagination = document.querySelector(".pagination");
 
 // API DATA
@@ -24,6 +25,14 @@ const getPhotos = async (url) => {
   }
 };
 
-const showPhotos = () => {};
+const showPhotos = (photos) => {
+  imagesList.innerHTML = "";
+  photos.forEach((photo) => {
+    const { urls } = photo;
+    const image = `
+        <img src="${urls.regular}" alt="image" class="image" />`;
+    imagesList.innerHTML += image;
+  });
+};
 
 getPhotos(API_URL);
