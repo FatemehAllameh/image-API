@@ -8,6 +8,7 @@ const pagination = document.querySelector(".pagination");
 const searchForm = document.querySelector(".search-form");
 const searchInput = document.querySelector(".search-input");
 const pageButtons = document.querySelectorAll(".page-btn");
+const headerTitle = document.querySelector(".header-title");
 
 // API DATA
 const API_KEY = "-YY31AzwG_-O8OwqzNv-sIalvtupZMnQVZenixjoej8";
@@ -28,7 +29,6 @@ const getPhotos = async (url) => {
     pagination.style.display = "flex";
 
     showPhotos(data);
-    console.log(data);
   } catch (err) {
     errorMessage.style.display = "block";
     errorMessage.innerHTML = err.message;
@@ -63,7 +63,6 @@ searchForm.addEventListener("submit", (e) => {
   document.querySelector("[data-page='1']").classList.add("active");
 
   const searchValue = searchInput.value;
-  console.log(API_SEARCH + searchValue);
   if (searchValue) {
     searchInput.value = "";
     loadingImage.style.display = "block";
@@ -92,6 +91,10 @@ pageButtons.forEach((btn) => {
 
     getPhotos(splitedURL[0] + "?" + params.toString());
   });
+});
+
+headerTitle.addEventListener("click", () => {
+  getPhotos(API_URL);
 });
 
 // Initial Call API
