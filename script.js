@@ -16,6 +16,7 @@ const API_SEARCH = `https://api.unsplash.com/search/photos?page=1&client_id=${AP
 
 let currentURL = null;
 
+// Get Photos From API
 const getPhotos = async (url) => {
   currentURL = url;
   try {
@@ -36,6 +37,7 @@ const getPhotos = async (url) => {
   }
 };
 
+// Show Photos In DOM
 const showPhotos = (data) => {
   imagesList.innerHTML = "";
   const photos = Array.isArray(data) ? data : data.results;
@@ -52,9 +54,11 @@ const showPhotos = (data) => {
   }
 };
 
+// Search Photos From API
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  // active first page button
   pageButtons.forEach((btn) => btn.classList.remove("active"));
   document.querySelector("[data-page='1']").classList.add("active");
 
@@ -90,4 +94,5 @@ pageButtons.forEach((btn) => {
   });
 });
 
+// Initial Call API
 getPhotos(API_URL);
